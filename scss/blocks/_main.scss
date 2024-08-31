@@ -1,5 +1,10 @@
 .main-section{
     background: #000;
+    background-image: url('./images/main-bg.jpg');
+    // background-size: cover; 
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // height: 100vh; 
 }
 .main {
     padding-top: 95px;
@@ -54,36 +59,134 @@
 
 
 //tabs
-.tabs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 50px;
-    background-color: transparent;
-  }
-  
-  .tab {
-    background: #181818;
-    padding: 27px 30px;
-    display: flex;
-    align-items: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 23px;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .tab i {
-    margin-right: 10px;
-  }
-  
-  .close-btn {
-    margin-left: auto;
+.main-tabs {
+  padding-top: 90px;
+  max-width: 1070px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start; 
+  position: relative;
+  gap: 0px; 
+}
+
+.main-tab {
+  height: 82px;
+  position: relative;
+  padding: 27px 40px;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  max-width: 349px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-tab__logo {
+  margin-right: 14px;
+}
+
+.main-tab__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  color: #fff;
+  @media(max-width: 1200px){
     font-size: 20px;
-    cursor: pointer;
   }
-  
+}
+
+.close {
+  margin-left: auto;
+  img{
+    height: 100%;
+  }
+}
+.main-tab__close{
+  position: absolute;
+  right: 0;
+}
+
+.tab-twitter {
+  transform: rotate(-6deg);
+  margin-right: -100px; 
+  z-index: 5; 
+}
+
+
+
+.tab-pinterest {
+  transform: rotate(3deg);
+  margin-top: 63px;
+  margin-right: -100px;
+  z-index: 4;
+}
+
+.tab-facebook {
+  transform: rotate(-2deg);
+  margin-top: 7px;
+  margin-right: -100px;
+  z-index: 3;
+  margin-top: -6px;
+
+}
+
+.tab-dribbble {
+  transform: rotate(4deg);
+  margin-top: 65px;
+  z-index: 1;
+}
+
+
+@media (max-width: 992px) {
+  .main-tabs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    max-width: 350px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .main-tab {
+    max-width: 100%;
+    margin: 0 auto;
+    transform: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    &__logo{
+      width: 27px;
+      height: 27px;
+    }
+    &__title{
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  .tab-twitter {
+    margin-top: 0;
+    transform: rotate(-4deg);
+    z-index: 5;
+  }
+
+  .tab-pinterest {
+    z-index: 4;
+    margin-top: 0;
+    transform: rotate(2deg);
+  }
+
+  .tab-facebook {
+    z-index: 3;
+    margin-top: 0;
+    transform: rotate(-2deg);
+  }
+
+  .tab-dribbble {
+    z-index: 2;
+    margin-top: 0;
+    transform: rotate(4deg);
+  }
+}

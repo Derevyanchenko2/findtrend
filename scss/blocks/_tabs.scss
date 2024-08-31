@@ -1,8 +1,7 @@
 .tabs-section {
   background: #a8ff35;
 }
-.tabs-wrapper {
-}
+
 .tabs-content {
   max-width: 854px;
   width: 100%;
@@ -12,8 +11,7 @@
   align-items: center;
   position: relative;
 }
-.section-title {
-}
+
 .tabs-content__title {
   text-align: center;
   margin-bottom: 60px;
@@ -24,6 +22,10 @@
 
 .tabs-arrow__icon {
   position: absolute;
+  @media(max-width: 768px){
+    max-width: 93px;
+    width: 100%;
+  }
 }
 .tabs-arrow__icon--left {
   top: 46%;
@@ -33,6 +35,11 @@
     left: -5px;
     z-index: 3;
     transform: rotate(-14deg);
+  }
+  @media(max-width: 380px){
+    top: 61%;
+    left: -5px;
+    z-index: 3;
   }
 }
 
@@ -44,6 +51,10 @@
     right: 0px;
     z-index: 3;
     transform: rotate(-20deg);
+  }
+  @media(max-width: 380px){
+    top: 22%;
+    right: 0px;
   }
 }
 
@@ -58,6 +69,11 @@
   }
   @media(max-width: 768px){
     padding: 24px;
+  }
+  @media(max-width: 480px){
+    width: 100%;
+    justify-content: center;
+    display: flex;
   }
 }
 .tabs-notification__btn {
@@ -102,9 +118,9 @@
   right: 0;
   top: 0;
   bottom: 0;
-  img{
-    height: 100%;
-  }
+  // img{
+  //   height: 100%;
+  // }
 }
 
 .tabs-text{

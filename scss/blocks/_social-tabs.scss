@@ -1,5 +1,8 @@
 .social-tabs-section{
     background: #fafafa;
+    @media(max-width: 768px){
+
+    }
 }
 .tabs-title{
     text-align: center;
@@ -118,6 +121,7 @@
     background: #000;
     margin: 0 auto;
     @media(max-width: 768px){
+        margin-top: 16px;
         padding: 12px 24px;
     }
 }
